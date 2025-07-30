@@ -116,4 +116,8 @@
 	"git.openRepositoryInParentFolders": "never",
 	"apollographql.devTools.showPanel": "always",
 	"workbench.colorTheme": "Ultima Workspace (GWZ)",
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> be67ace9711a11e098a20c896c3c736d644401eb
