@@ -1,0 +1,119 @@
+{
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": true,
+	"editor.lineHeight": 19,
+	"editor.letterSpacing": 0,
+	"editor.fontSize": 15,
+	"editor.cursorBlinking": "solid",
+	"editor.fontFamily": "Martian Mono",
+	"editor.fontLigatures": true,
+	"editor.quickSuggestionsDelay": 1000,
+	"editor.fontWeight": 500,
+	
+	"debug.console.fontFamily": "Martian Mono",
+	"debug.console.fontSize": 14,
+	"debug.console.lineHeight": 20,
+	
+	"workbench.fontAliasing": "auto",
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.editor.splitSizing": "split",
+	"workbench.statusBar.visible": true,
+	"editor.minimap.enabled": false,
+	"editor.rulers": [
+		80,
+		120
+	],
+	"terminal.integrated.cursorStyle": "block",
+	"terminal.integrated.cursorBlinking": false,
+	// "terminal.integrated.shell.osx": "/bin/zsh",
+	"terminal.integrated.fontSize": 15,
+	"terminal.integrated.fontWeight": 500,
+	"terminal.integrated.drawBoldTextInBrightColors": false,
+	"javascript.validate.enable": true,
+	"prettier": {
+		"singleQuote": true,
+		"semi": false
+	},
+	"editor.tabSize": 2,
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[sass]": {
+		"editor.defaultFormatter": "syler.sass-indented"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"liveServer.settings.donotVerifyTags": true,
+	"liveServer.settings.donotShowInfoMsg": true,
+	"task.autoDetect": "off",
+	"settingsSync.ignoredSettings": [],
+	"settingsSync.ignoredExtensions": [],
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "expanded",
+			"extensionName": ".css",
+			"savePath": null
+		},
+		{
+			"format": "compressed",
+			"extensionName": ".min.css",
+			"savePath": "/dist/css"
+		}
+	],
+	"git.enableSmartCommit": true,
+	"liveSassCompile.settings.autoprefix": [],
+	"explorer.confirmDelete": false,
+	"emmet.triggerExpansionOnTab": true,
+	"editor.cursorStyle": "block",
+	"workbench.colorCustomizations": {
+		"editorCursor.foreground": "#87d7af",
+		"terminalCursor.foreground": "#87d7af",
+		// "editorIndentGuide.activeBackground": "#5fafd7b9",
+		"editorBracketMatch.border": "#5fafd7b9",
+	},
+	"debug.console.wordWrap": false,
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+	"update.mode": "manual",
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"gitlens.hovers.currentLine.over": "line",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.largeFileOptimizations": false,
+	"workbench.editorAssociations": [
+		{
+			"viewType": "jupyter.notebook.ipynb",
+			"filenamePattern": "*.ipynb"
+		}
+	],
+	"editor.bracketPairColorization.enabled": false,
+	"editor.unicodeHighlight.allowedLocales": {
+		"ru": true
+	},
+	"editor.colorDecorators": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"redhat.telemetry.enabled": true,
+	"git.autofetch": true,
+	"git.openRepositoryInParentFolders": "never",
+	"apollographql.devTools.showPanel": "always",
+	"workbench.colorTheme": "Ultima Workspace (GWZ)",
+}
