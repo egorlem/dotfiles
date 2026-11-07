@@ -1,123 +1,160 @@
 {
-	"editor.insertSpaces": true,
-	"editor.detectIndentation": true,
+	// ─── редактор: шрифт и вид ───
+	"editor.fontFamily": "JetBrains Mono",
+	"editor.fontSize": 15,
 	"editor.lineHeight": 19,
 	"editor.letterSpacing": 0,
-	"editor.fontSize": 15,
-	"editor.cursorBlinking": "solid",
-	"editor.fontFamily": "Martian Mono",
+	"editor.fontWeight": 700,
 	"editor.fontLigatures": true,
-	"editor.quickSuggestionsDelay": 1000,
-	"editor.fontWeight": 500,
-	
-	"debug.console.fontFamily": "Martian Mono",
-	"debug.console.fontSize": 14,
-	"debug.console.lineHeight": 20,
-	
-	"workbench.fontAliasing": "auto",
-	"workbench.startupEditor": "newUntitledFile",
-	"workbench.editor.splitSizing": "split",
-	"workbench.statusBar.visible": true,
+	"editor.cursorStyle": "block",
+	"editor.cursorBlinking": "solid",
 	"editor.minimap.enabled": false,
 	"editor.rulers": [
 		80,
 		120
 	],
-	"terminal.integrated.cursorStyle": "block",
-	"terminal.integrated.cursorBlinking": false,
-	// "terminal.integrated.shell.osx": "/bin/zsh",
+	"editor.bracketPairColorization.enabled": false,
+	"editor.colorDecorators": false,
+	"editor.stickyScroll.enabled": true,
+	"editor.unicodeHighlight.allowedLocales": {
+		"ru": true
+	},
+
+	// ─── отступы ───
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": true,
+	"editor.tabSize": 2,
+
+	// ─── файлы: гигиена ───
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	// ВНИМАНИЕ: false отключает защиту от зависаний на очень больших файлах.
+	"editor.largeFileOptimizations": false,
+
+	// ─── сохранение ───
+	// formatOnSave выключен намеренно — форматируем вручную (Shift+Option+F).
+	"editor.formatOnSave": false,
+	"editor.formatOnPaste": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+
+	// ─── автодополнение ───
+	// editor.quickSuggestionsDelay удалён: в сборке 1.144 такого ключа нет,
+	// настройка молча не работала (реальная задержка — дефолтные 10 мс).
+
+	// ─── JS/TS: одна настройка вместо двух противоречащих ───
+	// Валидация выключена — проверку берёт на себя ESLint.
+	"js/ts.validate.enabled": false,
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+
+	// ─── терминал ───
+	"terminal.integrated.fontFamily": "JetBrains Mono",
 	"terminal.integrated.fontSize": 15,
 	"terminal.integrated.fontWeight": 500,
+	"terminal.integrated.cursorStyle": "block",
+	"terminal.integrated.cursorBlinking": false,
 	"terminal.integrated.drawBoldTextInBrightColors": false,
-	"javascript.validate.enable": true,
-	"prettier": {
-		"singleQuote": true,
-		"semi": false
+	"terminal.integrated.scrollback": 10000,
+
+	// ─── отладка ───
+	"debug.console.fontFamily": "JetBrains Mono",
+	"debug.console.fontSize": 14,
+	"debug.console.lineHeight": 20,
+	"debug.console.wordWrap": false,
+
+	// ─── workbench ───
+	"workbench.fontAliasing": "auto",
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.editor.splitSizing": "split",
+	"workbench.statusBar.visible": true,
+	"workbench.colorTheme": "Ultima Workspace (GWZ)",
+	"workbench.colorCustomizations": {
+		"editorCursor.foreground": "#87d7af",
+		"terminalCursor.foreground": "#87d7af",
+		"editorBracketMatch.border": "#5fafd7b9"
 	},
-	"editor.tabSize": 2,
+
+	// ─── обозреватель ───
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+
+	// ─── поиск ───
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/build": true,
+		"**/coverage": true,
+		"**/.git": true,
+		"**/*.lock": true
+	},
+
+	// ─── git ───
+	"git.enableSmartCommit": true,
+	"git.autofetch": true,
+	"git.openRepositoryInParentFolders": "never",
+	"gitlens.hovers.currentLine.over": "line",
+	"diffEditor.ignoreTrimWhitespace": false,
+
+	// ─── форматтеры по языкам ───
+	// Prettier установлен (esbenp.prettier-vscode), но его настройки
+	// задаются в .prettierrc проекта, а НЕ в settings.json — блок "prettier" удалён.
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
-		// "editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[javascriptreact]": {
-		// "editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-		// "editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescriptreact]": {
-		// "editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-		// "editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
-	"[sass]": {
-		"editor.defaultFormatter": "syler.sass-indented"
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
+	// добавлено: расширения стояли, но форматтеры не были назначены
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[dockercompose]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[toml]": {
+		"editor.defaultFormatter": "tamasfe.even-better-toml"
+	},
+	// markdown: пробелы в конце строки — это перенос, не трогаем их
+	"[markdown]": {
+		"files.trimTrailingWhitespace": false
+	},
+	// [sass] удалён: расширение syler.sass-indented не установлено,
+	// настройка молча не работала.
+
+	// ─── расширения ───
+	"emmet.triggerExpansionOnTab": true,
 	"liveServer.settings.donotVerifyTags": true,
 	"liveServer.settings.donotShowInfoMsg": true,
-	"task.autoDetect": "off",
-	"settingsSync.ignoredSettings": [],
-	"settingsSync.ignoredExtensions": [],
-	"liveSassCompile.settings.formats": [
-		{
-			"format": "expanded",
-			"extensionName": ".css",
-			"savePath": null
-		},
-		{
-			"format": "compressed",
-			"extensionName": ".min.css",
-			"savePath": "/dist/css"
-		}
-	],
-	"git.enableSmartCommit": true,
-	"liveSassCompile.settings.autoprefix": [],
-	"explorer.confirmDelete": false,
-	"emmet.triggerExpansionOnTab": true,
-	"editor.cursorStyle": "block",
-	"workbench.colorCustomizations": {
-		"editorCursor.foreground": "#87d7af",
-		"terminalCursor.foreground": "#87d7af",
-		// "editorIndentGuide.activeBackground": "#5fafd7b9",
-		"editorBracketMatch.border": "#5fafd7b9",
-	},
-	"debug.console.wordWrap": false,
-	"js/ts.implicitProjectConfig.experimentalDecorators": true,
-	"update.mode": "manual",
-	"[scss]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
-	},
-	"gitlens.hovers.currentLine.over": "line",
-	"diffEditor.ignoreTrimWhitespace": false,
-	"editor.largeFileOptimizations": false,
-	"workbench.editorAssociations": [
-		{
-			"viewType": "jupyter.notebook.ipynb",
-			"filenamePattern": "*.ipynb"
-		}
-	],
-	"editor.bracketPairColorization.enabled": false,
-	"editor.unicodeHighlight.allowedLocales": {
-		"ru": true
-	},
-	"editor.colorDecorators": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"redhat.telemetry.enabled": true,
-	"git.autofetch": true,
-	"git.openRepositoryInParentFolders": "never",
+	"shellformat.useEditorConfig": true,
+	"codesnap.showLineNumbers": false,
+	"codesnap.showWindowControls": false,
+	"codesnap.backgroundColor": "#232323",
 	"apollographql.devTools.showPanel": "always",
-	"workbench.colorTheme": "Ultima Workspace (GWZ)",
-<<<<<<< HEAD
+
+	// ─── прочее ───
+	"task.autoDetect": "off",
+	"update.mode": "manual",
+	"redhat.telemetry.enabled": false,
+	"chat.disableAIFeatures": true
 }
-=======
-}
->>>>>>> be67ace9711a11e098a20c896c3c736d644401eb
