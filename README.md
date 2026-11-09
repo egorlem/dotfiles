@@ -17,7 +17,7 @@ Shell (`zsh`) and Vim configs are intentionally **not** tracked here.
 | `.alacritty.toml` | `~/.alacritty.toml` |
 | `vscode/settings.json` | `~/Library/Application Support/Code/User/settings.json` |
 | `Ghostty/config` | `~/Library/Application Support/com.mitchellh.ghostty/config` |
-| `herdr/themes/guezwhoz.json` | `~/.config/herdr-app/themes/guezwhoz.json` |
+| `herdr/themes/gwz.json` | `~/.config/herdr-app/themes/gwz.json` |
 | `herdr/tui-theme.toml` | `[theme]` block of `~/.config/herdr/config.toml` — merge by hand |
 | `.local/MangoHud/MangoHud.conf` | `~/.config/MangoHud/MangoHud.conf` — Linux only |
 
@@ -36,8 +36,8 @@ mkdir -p ~/Library/Application\ Support/com.mitchellh.ghostty
 cp Ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
 
 mkdir -p ~/.config/herdr-app/themes
-cp herdr/themes/guezwhoz.json ~/.config/herdr-app/themes/
-herdr-app do app.theme --name guezwhoz
+cp herdr/themes/gwz.json ~/.config/herdr-app/themes/
+herdr-app do app.theme --name gwz
 
 # TUI: paste the [theme] block from herdr/tui-theme.toml into
 # ~/.config/herdr/config.toml, then validate:
@@ -46,7 +46,7 @@ herdr config check
 
 ## Herdr theme
 
-`herdr/themes/guezwhoz.json` is a terminal theme for
+`herdr/themes/gwz.json` is a terminal theme for
 [Herdr](https://herdr.dev) (the desktop app for terminals and agents). It is
 the same palette as the other configs here: `#1b1b1b` background, `#D9D9D9`
 text, blue `#5AA0D6` accent, green/teal ANSI set.
@@ -60,7 +60,7 @@ overrides the panel colors Herdr would otherwise derive (`surface`, `popover`,
 Pick it in Settings → Look, or from the shell:
 
 ```sh
-herdr-app do app.theme --name guezwhoz
+herdr-app do app.theme --name gwz
 ```
 
 To check it loaded, `herdr-app status` must show `"errors": []`; a parse error

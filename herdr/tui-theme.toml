@@ -1,8 +1,8 @@
-# guezwhoz — Herdr (TUI) theme.
+# gwz — Herdr (TUI) theme.
 #
 # Not a whole config: this is the [theme] block of ~/.config/herdr/config.toml.
 # Paste it in (replacing the existing [theme] / [theme.custom] blocks) and run
-# `herdr config check`. The palette is the same as themes/guezwhoz.json, the
+# `herdr config check`. The palette is the same as themes/gwz.json, the
 # theme for the Herdr desktop app.
 #
 # Tokens are the ones `theme.custom` knows: Herdr applies them on top of the
