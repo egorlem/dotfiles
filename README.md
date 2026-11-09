@@ -47,9 +47,11 @@ herdr config check
 ## Herdr theme
 
 `herdr/themes/gwz.json` is a terminal theme for
-[Herdr](https://herdr.dev) (the desktop app for terminals and agents). It is
-the same palette as the other configs here: `#1b1b1b` background, `#D9D9D9`
-text, blue `#5AA0D6` accent, green/teal ANSI set.
+[Herdr](https://herdr.dev) (the desktop app for terminals and agents): `#1b1b1b`
+background, `#D9D9D9` text, blue `#5AA0D6` accent, green/teal ANSI set. It is a
+sibling of the Ultima scheme the terminals here use, not a copy of it —
+`ultima.toml` (imported by `.alacritty.toml`) has `#1c1c1c`/`#dadada` and
+different ANSI reds, so pane colors and Herdr's chrome differ by a shade.
 
 Herdr reads every `themes/*.json` on its own and picks it up live, no restart.
 The file has the six keys the format knows — `background`, `foreground`,
