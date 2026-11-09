@@ -86,7 +86,7 @@ Mapping from the app theme, so both versions look the same:
 | `selected` | `selection_bg` — a step brighter (`#313a45` instead of `#24262c`) so the Navigate cursor still reads above `active_row_bg` |
 | `foreground` | `text` |
 | `muted` / `dim` | `subtext0` / `overlay1` |
-| `border` | `overlay0` |
+| `border` | `overlay0` — set to `#8C8C8C`, not the app's `#333333` border: Herdr draws dim UI text with it and `#333333` was unreadable |
 | `accent` | `accent`, `blue` |
 | `cyan` `ansi6`, `mauve` `ansi5` | `teal`, `mauve` |
 | `working` `ansi3`, `blocked` `ansi1`, `done` `ansi2` | `yellow`, `red`, `green` |

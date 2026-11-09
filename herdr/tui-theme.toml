@@ -25,7 +25,7 @@ name = "catppuccin"
   text = "#d9d9d9"
   subtext0 = "#8c8c8c"
   overlay1 = "#6e6e6e"
-  overlay0 = "#333333"
+  overlay0 = "#8C8C8C"
 
   # accents
   accent = "#5aa0d6"
