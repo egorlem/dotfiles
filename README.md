@@ -80,9 +80,10 @@ Mapping from the app theme, so both versions look the same:
 |---|---|
 | `background` | `panel_bg` |
 | `chrome` | `sidebar_bg` |
+| `canvas` | `surface_dim` |
 | `surface` / `raised` | `surface0` / `active_row_bg` |
 | `popover` | `surface1` |
-| `selected` | `selection_bg` |
+| `selected` | `selection_bg` — a step brighter (`#313a45` instead of `#24262c`) so the Navigate cursor still reads above `active_row_bg` |
 | `foreground` | `text` |
 | `muted` / `dim` | `subtext0` / `overlay1` |
 | `border` | `overlay0` |
