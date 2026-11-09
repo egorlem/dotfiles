@@ -23,7 +23,7 @@ name = "catppuccin"
 
   # text
   text = "#d9d9d9"
-  subtext0 = "#8c8c8c"
+  subtext0 = "#C0C0C0"
   overlay1 = "#6e6e6e"
   overlay0 = "#8C8C8C"
 
