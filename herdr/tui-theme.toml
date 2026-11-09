@@ -1,0 +1,38 @@
+# guezwhoz — Herdr (TUI) theme.
+#
+# Not a whole config: this is the [theme] block of ~/.config/herdr/config.toml.
+# Paste it in (replacing the existing [theme] / [theme.custom] blocks) and run
+# `herdr config check`. The palette is the same as themes/guezwhoz.json, the
+# theme for the Herdr desktop app.
+#
+# Tokens are the ones `theme.custom` knows: Herdr applies them on top of the
+# built-in theme named in `theme.name`.
+
+[theme]
+name = "catppuccin"
+
+[theme.custom]
+  # surfaces
+  panel_bg = "#1b1b1b"
+  sidebar_bg = "#1b1b1b"
+  surface_dim = "#1b1b1b"
+  surface0 = "#24262c"
+  surface1 = "#2a2d34"
+  active_row_bg = "#24262c"
+  selection_bg = "#313a45"
+
+  # text
+  text = "#d9d9d9"
+  subtext0 = "#8c8c8c"
+  overlay1 = "#6e6e6e"
+  overlay0 = "#333333"
+
+  # accents
+  accent = "#5aa0d6"
+  blue = "#5aa0d6"
+  teal = "#58d6ce"
+  mauve = "#9a90e0"
+  green = "#7ad694"
+  yellow = "#b7d074"
+  peach = "#d1ed85"
+  red = "#e85181"

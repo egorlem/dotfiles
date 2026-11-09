@@ -18,6 +18,7 @@ Shell (`zsh`) and Vim configs are intentionally **not** tracked here.
 | `vscode/settings.json` | `~/Library/Application Support/Code/User/settings.json` |
 | `Ghostty/config` | `~/Library/Application Support/com.mitchellh.ghostty/config` |
 | `herdr/themes/guezwhoz.json` | `~/.config/herdr-app/themes/guezwhoz.json` |
+| `herdr/tui-theme.toml` | `[theme]` block of `~/.config/herdr/config.toml` — merge by hand |
 | `.local/MangoHud/MangoHud.conf` | `~/.config/MangoHud/MangoHud.conf` — Linux only |
 
 ## Restore on a new machine
@@ -37,6 +38,10 @@ cp Ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/
 mkdir -p ~/.config/herdr-app/themes
 cp herdr/themes/guezwhoz.json ~/.config/herdr-app/themes/
 herdr-app do app.theme --name guezwhoz
+
+# TUI: paste the [theme] block from herdr/tui-theme.toml into
+# ~/.config/herdr/config.toml, then validate:
+herdr config check
 ```
 
 ## Herdr theme
@@ -60,3 +65,32 @@ herdr-app do app.theme --name guezwhoz
 
 To check it loaded, `herdr-app status` must show `"errors": []`; a parse error
 there means the layout with that theme was not applied.
+
+### TUI (`herdr`)
+
+`herdr/tui-theme.toml` carries the same palette to the terminal build of
+Herdr (the `herdr` binary). It is a snippet, not a whole config: it is the
+`[theme]` block of `~/.config/herdr/config.toml`. Replace the existing
+`[theme]` / `[theme.custom]` blocks with it and run `herdr config check`
+(`config: ok` means it parses; the TUI reads it on next start).
+
+Mapping from the app theme, so both versions look the same:
+
+| Herdr app | TUI token |
+|---|---|
+| `background` | `panel_bg` |
+| `chrome` | `sidebar_bg` |
+| `surface` / `raised` | `surface0` / `active_row_bg` |
+| `popover` | `surface1` |
+| `selected` | `selection_bg` |
+| `foreground` | `text` |
+| `muted` / `dim` | `subtext0` / `overlay1` |
+| `border` | `overlay0` |
+| `accent` | `accent`, `blue` |
+| `cyan` `ansi6`, `mauve` `ansi5` | `teal`, `mauve` |
+| `working` `ansi3`, `blocked` `ansi1`, `done` `ansi2` | `yellow`, `red`, `green` |
+
+The TUI has no per-pane ANSI palette of its own — pane colors come from the
+host terminal, which already runs the same scheme (`theme = guezwhoz` in
+Ghostty). `peach` has no counterpart in the app theme (no orange in the
+palette) and is set to `ansi11` `#d1ed85`.
